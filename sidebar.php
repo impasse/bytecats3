@@ -1,6 +1,8 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) {
+    exit;
+} ?>
 <aside class="grid-1-4" id="secondary" role="complementary">
-    <?php if(!is_mobile()) :?>
+    <?php if (!is_mobile()) :?>
         <?php if (!empty($this->options->sidebarBlock) && in_array('ShowSearch', $this->options->sidebarBlock)): ?>
     <section class="widget widget_search">
         <h3>文章搜索</h3>
@@ -26,13 +28,13 @@
         </section>
     <?php endif; ?>
    <div class="fixsidebar"> 
-<?php if(!is_mobile()) :?>
+<?php if (!is_mobile()) :?>
 
  <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section class="widget">
         <h3 class="widget-title"><?php _e('最新文章'); ?></h3>
         <ul class="widget-list">
-            <?php $this->widget('Widget_Contents_Post_Recent','pageSize=5')
+            <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=5')
             ->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
         </ul>
     </section>

@@ -1,14 +1,16 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) {
+    exit;
+} ?>
 <?php $this->need('header.php'); ?>
 
     <div class="grid-3-4" id="main" role="main">
         <h3 class="archive-title">
-         <?php $this->archiveTitle(array(           
+         <?php $this->archiveTitle(array(
             'tag'   =>  _t('标签“ %s ”下的所有文章')     ), '', ''); ?>
              
         </h3> 
         <?php if ($this->have()): ?>
-    	<?php while($this->next()): ?>
+    	<?php while ($this->next()): ?>
             <article class="post type-post">
     			<h2 class="post-title" itemprop="name headline"><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
     			<ul class="post-meta">

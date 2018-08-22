@@ -1,11 +1,13 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) {
+    exit;
+} ?>
 <?php $this->need('header.php'); ?>
 
 <div class="grid-3-4" id="main" role="main">
     <article class="post">
         <h1 class="post-title ta-c" itemprop="name headline"><?php $this->title() ?></h1>
         <ul class="post-meta ta-c">
-            <?php if(!is_mobile()) :?><li itemprop="author"><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li><?php endif; ?>
+            <?php if (!is_mobile()) :?><li itemprop="author"><?php _e('作者: '); ?><a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></li><?php endif; ?>
             <li><?php _e('时间: '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('Y-m-d'); ?></time></li>
             <li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
             <li><span>阅读：<?php get_post_view($this) ?> 次</span></li>
@@ -27,8 +29,8 @@
             </ul>
         </div>
         <ul class="post-near">
-            <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>
-            <li>下一篇: <?php $this->theNext('%s','没有了'); ?></li>
+            <li>上一篇: <?php $this->thePrev('%s', '没有了'); ?></li>
+            <li>下一篇: <?php $this->theNext('%s', '没有了'); ?></li>
         </ul>
     </article>
    
