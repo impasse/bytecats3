@@ -172,6 +172,7 @@ textarea {
 }
 textarea {
   resize: vertical;
+  min-height: 80px;
 }
 button.submit{
     border: 0;
