@@ -19,11 +19,16 @@
         echo " | ";
         $this->options->description();
     }?></title>
-
-<!-- 使用url函数转换相关路径 -->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('skin/' . $this->options->css . '.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('comments.css'); ?>">
-<!-- 通过自有函数输出HTML头部信息 -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96993727-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-96993727-2');
+</script>
 <?php $this->header(); ?>
 </head>
 <body class="<?php if (is_mobile()) {
