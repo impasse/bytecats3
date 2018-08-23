@@ -153,7 +153,7 @@ if ($comments->levels > 0) {
     } else {
         $avatar = $host . $url . $hash . '&r=' . $rating . '&d=mm';
     } ?>
-            <img class="avatar" src="<?php echo $avatar ?>" alt="<?php echo $comments->author; ?>" width="<?php echo $size ?>" height="<?php echo $size ?>" />
+            <img class="avatar" src="<?php echo $avatar ?>" alt="<?php echo $comments->author; ?>"/>
             <cite class="fn"><?php $comments->author(); ?></cite>
         </div>
         <div class="comment-meta">
