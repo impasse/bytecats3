@@ -40,7 +40,7 @@
     border: 1px solid #EEE;
     background: #ffffff;
 }
-.comment-list li.comment-by-author .fn a:after {
+.comment-list li.comment-by-author > div:nth-of-type(1) .fn a:after {
     content: "博主";
     margin-left: 6px;
     font-size: 12px;
